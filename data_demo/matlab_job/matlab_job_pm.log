@@ -1,5 +1,5 @@
 
-    The execution mode is background
+    The execution mode is condor
     This is the content of the script used to run the command :
 "
 "/afs/cbs.mpg.de/software/matlab/8.2/bin/matlab" -nosplash -nodesktop -r "load('/home/raid1/forschack/EigeneDateien/MatlabScripts/psom-1.0.2/data_demo/matlab_job/matlab_job_path.mat','path_work'), if ~ismember(path_work,{'gb_niak_omitted','gb_psom_omitted'}), path(path_work), end, a = clock, save('/home/raid1/forschack/EigeneDateien/MatlabScripts/psom-1.0.2/data_demo/matlab_job/matlab_job_test.mat','a'),exit" >"/home/raid1/forschack/EigeneDateien/MatlabScripts/psom-1.0.2/data_demo/matlab_job/matlab_job.log" 2>&1
@@ -10,5 +10,5 @@ touch "/home/raid1/forschack/EigeneDateien/MatlabScripts/psom-1.0.2/data_demo/ma
     The search path will be loaded from the following file:
 /home/raid1/forschack/EigeneDateien/MatlabScripts/psom-1.0.2/data_demo/matlab_job/matlab_job_path.mat
     The script is executed using the command :
-. "/home/raid1/forschack/EigeneDateien/MatlabScripts/psom-1.0.2/data_demo/matlab_job/matlab_job.sh"
+/home/raid1/forschack/EigeneDateien/MatlabScripts/psom-1.0.2/psom_submit.sh "/home/raid1/forschack/EigeneDateien/MatlabScripts/psom-1.0.2/psom_condor.sh -e \"/home/raid1/forschack/EigeneDateien/MatlabScripts/psom-1.0.2/data_demo/matlab_job/matlab_job.eqsub\" -o \"/home/raid1/forschack/EigeneDateien/MatlabScripts/psom-1.0.2/data_demo/matlab_job/matlab_job.oqsub\" -N psom_scr  \"/home/raid1/forschack/EigeneDateien/MatlabScripts/psom-1.0.2/data_demo/matlab_job/matlab_job.sh\"" /home/raid1/forschack/EigeneDateien/MatlabScripts/psom-1.0.2/data_demo/matlab_job/matlab_job.failed /home/raid1/forschack/EigeneDateien/MatlabScripts/psom-1.0.2/data_demo/matlab_job/matlab_job.exit /home/raid1/forschack/EigeneDateien/MatlabScripts/psom-1.0.2/data_demo/matlab_job/matlab_job.oqsub
 

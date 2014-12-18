@@ -1,0 +1,13 @@
+*.asv
+*.pdf
+*~
+*.sc
+*.sph
+*.wts
+*.spl
+*.loc
+*.log
+/home/raid1/forschack/EigeneDateien/MatlabScripts/psom-1.0.2/data_demo/
+*.error
+*.out
+!how2use.pdf

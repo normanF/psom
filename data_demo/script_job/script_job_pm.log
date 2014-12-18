@@ -1,9 +1,9 @@
 
-    The execution mode is background
+    The execution mode is condor
     This is the content of the script used to run the command :
 "
 touch "/home/raid1/forschack/EigeneDateien/MatlabScripts/psom-1.0.2/data_demo/script_job/script_job.exit"
 "
     The script is executed using the command :
-. "/home/raid1/forschack/EigeneDateien/MatlabScripts/psom-1.0.2/data_demo/script_job/script_job.sh"
+/home/raid1/forschack/EigeneDateien/MatlabScripts/psom-1.0.2/psom_submit.sh "/home/raid1/forschack/EigeneDateien/MatlabScripts/psom-1.0.2/psom_condor.sh -e \"/home/raid1/forschack/EigeneDateien/MatlabScripts/psom-1.0.2/data_demo/script_job/script_job.eqsub\" -o \"/home/raid1/forschack/EigeneDateien/MatlabScripts/psom-1.0.2/data_demo/script_job/script_job.oqsub\" -N psom_scr  \"/home/raid1/forschack/EigeneDateien/MatlabScripts/psom-1.0.2/data_demo/script_job/script_job.sh\"" /home/raid1/forschack/EigeneDateien/MatlabScripts/psom-1.0.2/data_demo/script_job/script_job.failed /home/raid1/forschack/EigeneDateien/MatlabScripts/psom-1.0.2/data_demo/script_job/script_job.exit /home/raid1/forschack/EigeneDateien/MatlabScripts/psom-1.0.2/data_demo/script_job/script_job.oqsub
 
