@@ -644,7 +644,6 @@ all_out = psom_files2cell(files_out);
 files_necessary = all_in(~ismember(all_in,all_out));
 mask_missing = false(length(files_necessary),1);
 flag_OK = true;
-files_necessary = unique(files_necessary);
 for num_f = 1:length(files_necessary)
     if ~psom_exist(files_necessary{num_f})
         if flag_OK
@@ -661,7 +660,7 @@ if ~flag_OK
         fprintf('\n!!! The input files of some jobs were found missing.\nPress CTRL-C now if you do not wish to run the pipeline or any key to continue anyway...\n');        
         pause        
     else
-        warning('The input files of some jobs were found missing !');
+        warning('\n!!! The input files of some jobs were found missing.\n');
     end
 end
 
@@ -716,9 +715,9 @@ end
 for num_j = 1:length(list_jobs)        
     job_name = list_jobs{num_j};        
     list_files = unique(files_out.(job_name));        
-    if ~flag_finished(num_j)&&(~isfield(pipeline.(job_name),'ispipeline')||~pipeline.(job_name).ispipeline)
+    if ~flag_finished(num_j)        
         for num_f = 1:length(list_files)        
-            if psom_exist(list_files{num_f})     
+            if psom_exist(list_files{num_f});        
                 psom_clean(list_files{num_f});        
             end        
         end        

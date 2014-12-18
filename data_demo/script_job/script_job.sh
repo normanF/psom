@@ -1,0 +1,1 @@
+touch "/home/raid1/forschack/EigeneDateien/MatlabScripts/psom-1.0.2/data_demo/script_job/script_job.exit"

@@ -1,8 +1,8 @@
-function status = psom_run_pipeline(pipeline,opt)
+function [] = psom_run_pipeline(pipeline,opt)
 % Run a pipeline using the Pipeline System for Octave and Matlab (PSOM).
 %
 % SYNTAX:
-% STATUS = PSOM_RUN_PIPELINE(PIPELINE,OPT)
+% [] = PSOM_RUN_PIPELINE(PIPELINE,OPT)
 %
 % _________________________________________________________________________
 % INPUTS:
@@ -79,7 +79,8 @@ function status = psom_run_pipeline(pipeline,opt)
 %        same as OPT.MODE, but applies to the pipeline manager itself.
 %
 %    MAX_QUEUED
-%        (integer, default GB_PSOM_MAX_QUEUED defined in PSOM_GB_VARS)
+%        (integer, default 1 'batch' modes, Inf in 'session', 'qsub',
+%        'msub' and 'condor' modes)
 %        The maximum number of jobs that can be processed
 %        simultaneously. Some qsub systems actually put restrictions
 %        on that. Contact your local system administrator for more info.
@@ -148,11 +149,6 @@ function status = psom_run_pipeline(pipeline,opt)
 %
 % _________________________________________________________________________
 % OUTPUTS:
-%
-% STATUS (integer) 0 if all jobs have been successfully completed, 1 if there were errors.
-%
-% _________________________________________________________________________
-% THE LOGS FOLDER:
 %
 % The pipeline manager is going to try to process the pipeline and create
 % all the output files. In addition logs and parameters of the pipeline are
@@ -418,7 +414,7 @@ else
         end
     end
 
-    status = psom_pipeline_process(file_pipeline,opt_proc);
+    psom_pipeline_process(file_pipeline,opt_proc);
 
     %% If not in session mode, monitor the output of the pipeline
     if flag_verbose&&~strcmp(opt.mode_pipeline_manager,'session')

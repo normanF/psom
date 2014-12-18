@@ -1,0 +1,31 @@
+
+******************************
+Log of the (matlab) job : psom_pipe_job
+Started on 18-Dec-2014 13:35:48
+User: forschack
+host : bosch
+system : unix
+******************************
+The job starts now !
+********************
+
+a =
+
+   1.0e+03 *
+
+    2.0140    0.0120    0.0180    0.0130    0.0350    0.0480
+
+
+****************
+Checking outputs
+****************
+
+*********************************************************
+18-Dec-2014 13:35:48 : The job was successfully completed
+Total time used to process the job : 0.05 sec.
+*********************************************************
+
+ans =
+
+     0
+

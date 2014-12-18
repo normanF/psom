@@ -136,4 +136,3 @@ job.opt.psom.mode = 'session';
 job.opt.psom.mode_pipeline_manager = 'session';
 job.opt.psom.path_logs = path_logs;
 job.opt.psom.flag_pause = false;
-job.ispipeline = true;

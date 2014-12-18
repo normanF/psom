@@ -58,8 +58,7 @@ gb_psom_path_search = '';
 gb_psom_tmp = [tempdir filesep]; 
 
 % How to open pdf files
-% gb_psom_pdf_viewer = 'evince';
-gb_psom_pdf_viewer = 'okular';
+gb_psom_pdf_viewer = 'evince';
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% The following variables should not be changed %%

@@ -1,8 +1,8 @@
-function status = psom_pipeline_process(file_pipeline,opt)
+function [] = psom_pipeline_process(file_pipeline,opt)
 % Process a pipeline that has previously been initialized.
 %
 % SYNTAX:
-% STATUS = PSOM_PIPELINE_PROCESS(FILE_PIPELINE,OPT)
+% [] = PSOM_PIPELINE_PROCESS(FILE_PIPELINE,OPT)
 %
 % _________________________________________________________________________
 % INPUTS:
@@ -104,8 +104,6 @@ function status = psom_pipeline_process(file_pipeline,opt)
 %
 % _________________________________________________________________________
 % OUTPUTS:
-%
-% STATUS (integer) 0 if all jobs have been successfully completed, 1 if there were errors.
 %
 % _________________________________________________________________________
 % SEE ALSO:
@@ -742,7 +740,9 @@ if exist('file_pipe_running','var')
     end
 end
 
-status = flag_any_fail;
+if strcmp(opt.mode,'session')&&strcmp(opt.mode_pipeline_manager,'session')&&flag_any_fail
+    error('All jobs have been processed, but some jobs have failed. You may want to restart the pipeline latter if you managed to fix the problems.')
+end
 
 %%%%%%%%%%%%%%%%%%
 %% subfunctions %%
